@@ -7,7 +7,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "yarn generate",
-    "deploy": "echo labfero.com > .output/public/CNAME && node deploy.js"
+    "deploy": "echo labfero.com > .output/public/CNAME && echo > .output/public/.nojenkyll && node deploy.js"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^2.0.0",
