@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -62,9 +62,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            dist
+            ./output/public
             .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('./output/public') }}
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
